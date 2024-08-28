@@ -1,0 +1,20 @@
+
+создаем тестовую бд, делаем миграции
+
+затем преносим все таблицы в тестовую бд
+
+composer require --dev alice symfony/test-pack symfony/http-client justinrainbow/json-schema
+
+alice - это пакет работы с фикстурами
+
+пишем фикстуры и запускаем их для тестовой бд
+symfony console --env=test hautelook:fixtures:load
+
+
+---
+запускаем тесты
+vendor/bin/phpunit
+
+---
+скрыть
+<env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled" />

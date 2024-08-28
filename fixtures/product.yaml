@@ -1,0 +1,8 @@
+# api/fixtures/product.yaml
+
+App\Entity\Product:
+  manufacturer_{1..100}:
+    name: <catchPhrase()>
+    description: <sentence(10)>
+    issueDate: <dateTime()>
+    manufacturer: '@manufacturer_<numberBetween(1, 10)>'

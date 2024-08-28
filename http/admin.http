@@ -1,0 +1,34 @@
+### Manufactures
+GET http://127.0.0.1:8000/api/products/1
+Content-Type: application/ld+json
+x-api-token: 6829e8c0be2703daccb6d817a0a2783f4df2759d09bcf521ccbc698617f1ba408d2d75686479c8e2f049dae46b94ec5761b729b91aaf95b124a3e19e0a
+
+### Products
+GET http://127.0.0.1:8000/api/products?page=1
+Content-Type: application/json
+x-api-token: fa1b0a89f403184023e174a13c2ebd867ec538d569a949c7bc935e0177fe839f76a63ac96c9792ddc4443652570cba2ad9836aab9646e3cb502c762e0a
+
+### Manufacture
+DELETE http://127.0.0.1:8000/api/manufacturers/1
+Content-Type: application/json
+
+### Create Manufacture
+POST http://127.0.0.1:8000/api/products
+Content-Type: application/ld+json
+x-api-token: 6829e8c0be2703daccb6d817a0a2783f4df2759d09bcf521ccbc698617f1ba408d2d75686479c8e2f049dae46b94ec5761b729b91aaf95b124a3e19e0a
+
+{
+  "name": "airbn",
+  "description": "accommodation",
+  "issueDate": "2024-08-15T10:33:30.666Z",
+  "manufacturer": "/api/manufacturers/1"
+}
+
+### Update piece of Manufacture object
+PATCH http://127.0.0.1:8000/api/products/1
+Content-Type: application/merge-patch+json
+x-api-token: 6829e8c0be2703daccb6d817a0a2783f4df2759d09bcf521ccbc698617f1ba408d2d75686479c8e2f049dae46b94ec5761b729b91aaf95b124a3e19e0a
+
+{
+  "description": " new description"
+}
